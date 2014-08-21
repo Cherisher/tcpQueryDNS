@@ -110,7 +110,7 @@ unsigned char* QueryDns(string server, int port, struct myarg* argument)
     char data[data_len];
     if((sock = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP)) < 0)
     {
-        printf("Tcp1SocketCollectdata create socket failed!\n");
+        printf("Tcp create socket failed!\n");
         return 0;
     }
     struct timeval tv;
@@ -233,7 +233,7 @@ int main(){
     cout << dhost.size()<< endl;
     CheckConf();
     cout << ">> set socket..." << endl;
-    CreateServer("127.0.0.1",dport);
     cout <<">> Now you can set dns server to 127.0.0.1" << endl;
+    CreateServer("127.0.0.1",dport);
     return 0;
 }
